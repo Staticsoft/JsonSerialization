@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net60</TargetFramework>
@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\JsonSerialization.Abstractions\JsonSerialization.Abstractions.csproj" />
-    <ProjectReference Include="..\JsonSerialization.Memory\JsonSerialization.Memory.csproj" />
+    <ProjectReference Include="..\JsonSerialization.Net\JsonSerialization.Net.csproj" />
   </ItemGroup>
   
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">

@@ -6,12 +6,16 @@
     <RootNamespace>Staticsoft.$(MSBuildProjectName)</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\JsonSerialization.Abstractions\JsonSerialization.Abstractions.csproj" />
-  </ItemGroup>
-  
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
     <Compile Include="..\Compatibility\IsExternalInit.cs" Link="IsExternalInit.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Staticsoft.Extensions.DependencyInjection" Version="1.0.0-1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JsonSerialization.Abstractions\JsonSerialization.Abstractions.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
