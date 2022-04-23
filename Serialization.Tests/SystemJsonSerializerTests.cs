@@ -4,7 +4,7 @@ using Staticsoft.Testing;
 
 namespace Staticsoft.JsonSerialization.Tests
 {
-    public class SystemJsonSerializerTests : JsonSerializerTests<SystemJsonSerializerDependencies> { }
+    public class SystemJsonSerializerTests : SerializerTests<SystemJsonSerializerDependencies> { }
 
     public class SystemJsonSerializerDependencies : UnitServicesBase
     {

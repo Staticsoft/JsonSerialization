@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonSerialization.Abstractions", "JsonSerialization.Abstractions\JsonSerialization.Abstractions.csproj", "{861DC089-2933-4ED7-90B6-FFE461043CE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serialization.Abstractions", "Serialization.Abstractions\Serialization.Abstractions.csproj", "{861DC089-2933-4ED7-90B6-FFE461043CE9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonSerialization.Tests", "JsonSerialization.Tests\JsonSerialization.Tests.csproj", "{40750711-19B7-4AF9-8B97-2CE419BA90AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serialization.Tests", "Serialization.Tests\Serialization.Tests.csproj", "{40750711-19B7-4AF9-8B97-2CE419BA90AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonSerialization.Net", "JsonSerialization.Net\JsonSerialization.Net.csproj", "{EA3EC815-1AA9-454B-B0C0-6978A86B2BBB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serialization.Net", "Serialization.Net\Serialization.Net.csproj", "{EA3EC815-1AA9-454B-B0C0-6978A86B2BBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -22,8 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\JsonSerialization.Abstractions\JsonSerialization.Abstractions.csproj" />
-    <ProjectReference Include="..\JsonSerialization.Net\JsonSerialization.Net.csproj" />
+    <ProjectReference Include="..\Serialization.Abstractions\Serialization.Abstractions.csproj" />
+    <ProjectReference Include="..\Serialization.Net\Serialization.Net.csproj" />
   </ItemGroup>
   
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">

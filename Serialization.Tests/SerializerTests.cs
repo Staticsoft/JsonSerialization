@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Staticsoft.JsonSerialization.Tests
 {
-    public abstract class JsonSerializerTests<TSPF> : TestBase<JsonSerializer, TSPF>
+    public abstract class SerializerTests<TSPF> : TestBase<Serializer, TSPF>
         where TSPF : ServiceProviderFactory, new()
     {
         [Fact]
