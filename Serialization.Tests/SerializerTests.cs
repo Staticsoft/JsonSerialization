@@ -26,7 +26,25 @@ namespace Staticsoft.JsonSerialization.Tests
             Assert.Equal(obj, deserialized);
         }
 
+        [Fact]
+        public void CanSerializeAndDeserializeCaseInsensitive()
+        {
+            var serialized = SUT.Serialize(new LowercaseProperty { text = "Test" });
+            var deserialized = SUT.Deserialize<UppercaseProperty>(serialized);
+            Assert.Equal("Test", deserialized.Text);
+        }
+
         T SerializeAndDeserialize<T>(T obj)
             => SUT.Deserialize<T>(SUT.Serialize(obj));
+    }
+
+    public class UppercaseProperty
+    {
+        public string Text { get; init; }
+    }
+
+    public class LowercaseProperty
+    {
+        public string text { get; init; }
     }
 }
