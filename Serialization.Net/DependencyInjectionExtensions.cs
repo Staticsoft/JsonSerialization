@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Staticsoft.JsonSerialization.Abstractions;
+using Staticsoft.Serialization.Abstractions;
 
-namespace Staticsoft.JsonSerialization.Net
+namespace Staticsoft.Serialization.Net
 {
     public static class DependencyInjectionExtensions
     {

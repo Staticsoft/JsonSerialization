@@ -1,4 +1,4 @@
-﻿namespace Staticsoft.JsonSerialization.Abstractions
+﻿namespace Staticsoft.Serialization.Abstractions
 {
     public interface Serializer
     {

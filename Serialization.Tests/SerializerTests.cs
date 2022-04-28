@@ -1,9 +1,9 @@
-﻿using Staticsoft.JsonSerialization.Abstractions;
+﻿using Staticsoft.Serialization.Abstractions;
 using Staticsoft.Testing;
 using System;
 using Xunit;
 
-namespace Staticsoft.JsonSerialization.Tests
+namespace Staticsoft.Serialization.Tests
 {
     public abstract class SerializerTests<TSPF> : TestBase<Serializer, TSPF>
         where TSPF : ServiceProviderFactory, new()
