@@ -1,7 +1,7 @@
-﻿using Staticsoft.JsonSerialization.Abstractions;
+﻿using Staticsoft.Serialization.Abstractions;
 using Json = System.Text.Json;
 
-namespace Staticsoft.JsonSerialization.Net
+namespace Staticsoft.Serialization.Net
 {
     public class SystemJsonSerializer : JsonSerializer
     {

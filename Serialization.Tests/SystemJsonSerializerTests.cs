@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Staticsoft.JsonSerialization.Net;
+using Staticsoft.Serialization.Net;
 using Staticsoft.Testing;
 
-namespace Staticsoft.JsonSerialization.Tests
+namespace Staticsoft.Serialization.Tests
 {
     public class SystemJsonSerializerTests : SerializerTests<SystemJsonSerializerDependencies> { }
 
