@@ -3,48 +3,46 @@ using Staticsoft.Testing;
 using System;
 using Xunit;
 
-namespace Staticsoft.Serialization.Tests
+namespace Staticsoft.Serialization.Tests;
+
+public abstract class SerializerTests : TestBase<Serializer>
 {
-    public abstract class SerializerTests<TSPF> : TestBase<Serializer, TSPF>
-        where TSPF : ServiceProviderFactory, new()
+    [Fact]
+    public void CanSerializeAndDeserializeObject()
     {
-        [Fact]
-        public void CanSerializeAndDeserializeObject()
+        var obj = new
         {
-            var obj = new
+            IntField = 42,
+            StringField = "Hello, World",
+            BoolField = true,
+            FloatField = 13.37f,
+            ObjectField = new
             {
-                IntField = 42,
-                StringField = "Hello, World",
-                BoolField = true,
-                FloatField = 13.37f,
-                ObjectField = new
-                {
-                    DateTimeField = DateTime.Today
-                }
-            };
-            var deserialized = SerializeAndDeserialize(obj);
-            Assert.Equal(obj, deserialized);
-        }
-
-        [Fact]
-        public void CanSerializeAndDeserializeCaseInsensitive()
-        {
-            var serialized = SUT.Serialize(new LowercaseProperty { text = "Test" });
-            var deserialized = SUT.Deserialize<UppercaseProperty>(serialized);
-            Assert.Equal("Test", deserialized.Text);
-        }
-
-        T SerializeAndDeserialize<T>(T obj)
-            => SUT.Deserialize<T>(SUT.Serialize(obj));
+                DateTimeField = DateTime.Today
+            }
+        };
+        var deserialized = SerializeAndDeserialize(obj);
+        Assert.Equal(obj, deserialized);
     }
 
-    public class UppercaseProperty
+    [Fact]
+    public void CanSerializeAndDeserializeCaseInsensitive()
     {
-        public string Text { get; init; }
+        var serialized = SUT.Serialize(new LowercaseProperty { text = "Test" });
+        var deserialized = SUT.Deserialize<UppercaseProperty>(serialized);
+        Assert.Equal("Test", deserialized.Text);
     }
 
-    public class LowercaseProperty
-    {
-        public string text { get; init; }
-    }
+    T SerializeAndDeserialize<T>(T obj)
+        => SUT.Deserialize<T>(SUT.Serialize(obj));
+}
+
+public class UppercaseProperty
+{
+    public string Text { get; init; }
+}
+
+public class LowercaseProperty
+{
+    public string text { get; init; }
 }
