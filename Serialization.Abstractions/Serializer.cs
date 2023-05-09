@@ -1,8 +1,7 @@
-﻿namespace Staticsoft.Serialization.Abstractions
+﻿namespace Staticsoft.Serialization.Abstractions;
+
+public interface Serializer
 {
-    public interface Serializer
-    {
-        string Serialize<T>(T obj);
-        T Deserialize<T>(string json);
-    }
+    string Serialize<T>(T obj);
+    T Deserialize<T>(string json);
 }
